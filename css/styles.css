@@ -129,7 +129,8 @@ input{
 	width:100%;
 	/*position:absolute;*/
 	top:70%;
-	padding-bottom:36px
+	padding-top:20px;
+	padding-bottom:20px
 }
 .btn_cont{
 	/*position:absolute;*/
