@@ -1,2 +1,0 @@
-# qrnico
-angular test
