@@ -201,9 +201,15 @@ input{
 }
 .scans{
 	display:none;}
+.gothanks .section.qr{
+	opacity:0 !important;
+	transition-delay:.2s;
+}
 .section.thanks{
 	opacity:0;
-	z-index:7
+	z-index:7;
+	background-size:auto 100%;
+	background-repeat:no-repeat;
 }
 .gothanks .section.thanks{
 	transition-delay:.2s;
@@ -213,3 +219,6 @@ input{
 	top:45px;
 	opacity:1;
 }
+.img_thanks{
+	height:268px;
+	width:100%;}

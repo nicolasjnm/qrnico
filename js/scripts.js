@@ -67,7 +67,8 @@ setInterval(function(){
 	url_bt = $(".scans li:first-child").text();
 	name_ficha = url_bt.split("/");
 	name_ficha = name_ficha[name_ficha.length-1].split(".")
-	$(".qr.section .bt").attr({"href":url_bt})
-	$(".nombre_ficha").text(name_ficha[0])
+	$(".qr.section .bt").attr({"href":url_bt});
+	$(".nombre_ficha").text(name_ficha[0]);
+	$(".section.thanks").css({"background-image":"url(img/"+name_ficha[0]+".png)"})
 	
 },1000)
