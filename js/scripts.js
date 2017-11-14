@@ -57,7 +57,7 @@ $(document).on("click", ".form .bt.enabled", function(){
 })
 setInterval(function(){
 	var url_bt, name_ficha;
-	url_bt = $(".scans li:last-child").text();
+	url_bt = $(".scans li:first-child").text();
 	name_ficha = url_bt.split("/");
 	name_ficha = name_ficha[name_ficha.length-1].split(".")
 	$(".qr.section .bt").attr({"href":url_bt})
