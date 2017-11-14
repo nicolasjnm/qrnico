@@ -55,3 +55,8 @@ $(document).on("click", ".form .bt.enabled", function(){
 		},1700)
 
 })
+var url_bt;
+setInterval(function(){
+	url_bt = $(".scans li:last-child").text();
+	$(".qr.section .bt").attr({"href":url_bt})
+},1000)
