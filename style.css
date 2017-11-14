@@ -75,3 +75,5 @@ body, html {
   width: 100%;
   overflow: hidden;
 }
+.preview-container video{
+	transform:scale(-1,1)}
