@@ -65,6 +65,14 @@ setInterval(function(){
 $(document).on(clickEvent, ".form .bt.enabled", function(){
 		var nombre      = $(".name").val();
 		var email = $(".email").val();
+		$.ajax({ 
+		  method: "POST",
+		  url: "data.php",
+		  data: {"name": nombre,"em":email},
+		  success: function(data){
+			  console.log("ok");
+		  }
+		})
 		$("body").addClass("goqr");
 		setTimeout(function(){
 			$(".form").remove();
