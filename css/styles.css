@@ -201,3 +201,15 @@ input{
 }
 .scans{
 	display:none;}
+.section.thanks{
+	opacity:0;
+	z-index:7
+}
+.gothanks .section.thanks{
+	transition-delay:.2s;
+	opacity:1;
+}
+.gothanks .section.thanks .logo{
+	top:45px;
+	opacity:1;
+}

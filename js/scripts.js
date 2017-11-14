@@ -55,6 +55,13 @@ $(document).on("click", ".form .bt.enabled", function(){
 		},1700)
 
 })
+$(document).on("click", ".qr.section .bt", function(){
+		$("body").addClass("gothanks");
+		setTimeout(function(){
+			$(".qr.section").css({"z-index":1});
+		},1700)
+
+})
 setInterval(function(){
 	var url_bt, name_ficha;
 	url_bt = $(".scans li:first-child").text();
