@@ -1,3 +1,17 @@
+var Mobile = navigator.userAgent.indexOf('Mobile') >= 0; 
+var clickEvent = Mobile ? 'touchend' : 'click';
+var touchMoving = false;
+if (Mobile)
+{  
+	$(document).on("touchmove", function(){
+		 touchMoving = true;
+	})
+	
+	$(document).on("touchend", function(){
+		 touchMoving = false;
+	})
+
+} 
 function validate_email(mail)   
 {  
 var error = 0;
@@ -48,18 +62,25 @@ setInterval(function(){
 		$(".form .ms").text("Compruebe su email");
 	}
 },500)
-$(document).on("click", ".form .bt.enabled", function(){
+$(document).on(clickEvent, ".form .bt.enabled", function(){
 		$("body").addClass("goqr");
 		setTimeout(function(){
 			$(".form").remove();
 		},1700)
 
 })
-$(document).on("click", ".qr.section .bt", function(){
+$(document).on(clickEvent, ".qr.section .bt", function(){
 		$("body").addClass("gothanks");
 		setTimeout(function(){
 			$(".qr.section").css({"z-index":1});
-		},1700)
+		},1000)
+
+})
+$(document).on(clickEvent, ".thanks.section .bt", function(){
+		$("body").removeClass("gothanks");
+		setTimeout(function(){
+			$(".qr.section").css({"z-index":8});
+		},1000)
 
 })
 setInterval(function(){
