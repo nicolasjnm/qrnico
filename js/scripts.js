@@ -55,8 +55,12 @@ $(document).on("click", ".form .bt.enabled", function(){
 		},1700)
 
 })
-var url_bt;
+var url_bt, name_ficha;
 setInterval(function(){
 	url_bt = $(".scans li:last-child").text();
+	name_ficha = url_bt.split("/");
+	name_ficha = name_ficha[name_ficha.length-1].split(".")
 	$(".qr.section .bt").attr({"href":url_bt})
+	$(".nombre_ficha").text(name_ficha[0])
+	
 },1000)

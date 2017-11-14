@@ -186,6 +186,7 @@ input{
 	height:100%;
 	left:50%;
 	background:#F00;
+	z-index:10;
 }
 .qr_vid:after{
 	content:"";
@@ -195,6 +196,7 @@ input{
 	width:100%;
 	left:0;
 	background:#F00;
+	z-index:10;
 }
 .scans{
 	display:none;}
