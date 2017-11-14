@@ -63,6 +63,9 @@ setInterval(function(){
 	}
 },500)
 $(document).on(clickEvent, ".form .bt.enabled", function(){
+		var nombre      = $(".name").val();
+		var email = $(".email").val();
+		writeToFile(name, email);
 		$("body").addClass("goqr");
 		setTimeout(function(){
 			$(".form").remove();
@@ -93,3 +96,10 @@ setInterval(function(){
 	$(".section.thanks").css({"background-image":"url(img/"+name_ficha[0]+".png)"})
 	
 },1000)
+
+function writeToFile(d1, d2){
+    var fso = new ActiveXObject("Scripting.FileSystemObject");
+    var fh = fso.OpenTextFile("data.txt", 8, false, 0);
+    fh.WriteLine(d1 + ',' + d2);
+    fh.Close();
+}
