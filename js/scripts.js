@@ -55,16 +55,3 @@ $(document).on("click", ".form .bt.enabled", function(){
 		},1700)
 
 })
-$(document).ready(function() {
-    $('#reader').html5_qrcode(function(data) { // start webcam
-          console.log(data); // print QR code content
-          $("#reader").html5_qrcode_stop(); // stop webcam 
-        },
-        function(error) {
-          console.log(error);
-        },
-        function(videoError) {
-          console.log(videoError);
-        }
-    );
-});
